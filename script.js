@@ -41,6 +41,10 @@ function handlePageHash(){
 }
 
 $(window).load(function(){
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+        alert("Note that this version of the website isn't optimized for mobile. " + 
+              "Feel free to navigate, but you should access it on a desktop for the optimal experience.");
+    }
     handlePageHash();
 });
 
