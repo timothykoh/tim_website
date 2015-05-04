@@ -1,0 +1,221 @@
+.page-selector-box{
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    z-index: 1;
+}
+    .page-selector-box a{
+        color: white;
+        text-decoration: none;
+        font-size: 60px;
+        line-height: 20px;
+        margin-right: 5px;
+        vertical-align: top;
+        opacity: 0.7;
+    }
+    .page-selector-box a.selected{
+        color: #1fd81f;
+    }
+    .page-selector-box a:hover{
+        opacity: 1;
+    }
+
+.youtube-btn{
+    width: 35px;
+}
+
+.dark-filter{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    z-index: -1;
+}
+
+.bold{
+    font-weight: 700;
+}
+.italic{
+    font-style: italic;
+}
+.semibold{
+    font-style: 400;
+}
+
+.page{
+    width: 100%;
+    height: 100%;
+    display: none;
+    min-width: 1280px;
+    position: absolute;
+}
+.page.selected{
+    display: block;
+}
+    .page .page-bg{
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        z-index: -3;
+        background-size: cover;
+        min-width: 1280px;
+    }
+        .page .page-bg .filter{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+        }
+        .page .page-bg .filter.black-overlay{
+            background-color: #000;
+            opacity: 0.1;
+        }
+        .page .page-bg .filter.red{
+            background-color: #320606;
+            opacity: 0.6;
+        }
+        .page .page-bg .filter.blue{
+            background-color: #020051;
+            opacity: 0.6;
+        }
+    .page .page-cover{
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        min-width: 1280px;
+        z-index: -2; /* has to be below the dark-filter */
+    }
+        .page .page-cover .page-header{
+            font-size: 100px;
+            height: 100px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            color: white;
+            text-align: center;
+            text-transform: uppercase;
+            font-family: Ubuntu, Helvetica, sans-serif;
+            font-weight: 400;
+            letter-spacing: 10px;
+        }
+            .page .page-cover .page-header span{
+                display: block;
+                font-size: 15px;
+                margin-top: 30px;
+            }
+    .page .page-content{
+        position: absolute;
+        top: 100%;
+        width: 70%;
+        left: 15%;
+    }
+    .page .page-content:after{
+        content: "";
+        position: absolute;
+        bottom: -90px;
+        height: 90px;
+        width: 1px;
+    }
+
+.home-page .page-bg{
+    background-image: url("images/pond.jpg");
+}
+    .home-page .page-cover .page-header{
+        height: 145px;
+    }
+    .home-page .page-content{
+        background-color: rgba(0,0,0,0.9);
+    }
+        .home-page .page-content .left-bar{
+            width: 35%;
+            display: inline-block;
+        }
+        .home-page .page-content .left-bar img{
+            width: 100%;
+            vertical-align: top;
+        }
+        .home-page .page-content .left-bar img:first-child{
+            margin-bottom: 3px;
+        }
+        .home-page .page-content .right-bar{
+            width: 64%;
+            display: inline-block;
+            vertical-align: top;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+            padding: 30px;
+            font-family: Proxima-Nova, Helvetica, sans-serif;
+            font-weight: 100;
+            color: #e0e0e0;
+        }   
+            .home-page .page-content .right-bar h1{
+                font-size: 40px;
+                margin-bottom: 40px;
+            }
+            .home-page .page-content .right-bar p{
+                line-height: 25px;
+                font-size: 20px;
+                display: block;
+                margin-bottom: 15px;
+            }
+            .home-page .page-content .right-bar p:last-child{
+                margin-bottom: 0;
+            }
+
+.projects-page .page-bg{
+    background-image: url("images/golden_gate.jpg");
+}
+    .projects-page .page-cover .page-header{
+        height: 145px;
+    }
+    .projects-page .page-content{
+    }
+        .projects-page .page-content .card{
+            width: 100%;
+            background-color: rgba(0,0,0,0.9);
+            margin-top: 10px;
+        }
+        .projects-page .page-content .card .card-img{
+            width: 40%;
+            display: inline-block;
+            vertical-align: top;
+        }
+        .projects-page .page-content .card div{
+            display: inline-block;
+            width: calc(60% - 4px);
+            vertical-align: top;
+            padding: 20px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            -o-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+            .projects-page .page-content .card div h1{
+                color: #e0e0e0;
+                font-family: Proxima-Nova, Helvetica, sans-serif;
+                font-weight: 100;
+                font-size: 40px;
+                margin-bottom: 20px;
+                display: inline-block;
+            }
+            .projects-page .page-content .card div .youtube-btn{
+                display: inline-block;
+                vertical-align: top;
+                margin-top: 8px;
+                margin-left: 15px;
+            }
+            .projects-page .page-content .card div p{
+                color: #e0e0e0;
+                font-family: Proxima-Nova, Helvetica, sans-serif;
+                font-weight: 100;
+                line-height: 20px;
+                margin-bottom: 30px;
+                font-size: 17px;
+            }
+
+
